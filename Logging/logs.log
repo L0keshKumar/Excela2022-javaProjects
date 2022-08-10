@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-06-06T17:38:11</date>
+  <millis>1654517291611</millis>
+  <sequence>0</sequence>
+  <logger>com.example.LogToFile</logger>
+  <level>WARNING</level>
+  <class>com.example.LogToFile</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>K is great Programmer</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-06-06T17:38:54</date>
+  <millis>1654517334988</millis>
+  <sequence>0</sequence>
+  <logger>com.example.LogToFile</logger>
+  <level>WARNING</level>
+  <class>com.example.LogToFile</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>K is great Programmer</message>
+</record>
+</log>
