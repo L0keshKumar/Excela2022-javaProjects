@@ -12,13 +12,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entity.SkillReference;
 import com.example.demo.service.SkillReferenceService;
 
+
 @RestController
 @RequestMapping("/api/v1/reference")
 public class SkillReferenceController {
 
 	@Autowired
 	private SkillReferenceService service;
-	
+
+	public SkillReferenceController(SkillReferenceService service) {
+		super();
+		this.service = service;
+	}
+
 	@PostMapping(path = "/add")
 	public Object add(@RequestBody SkillReference entity) {
 		return this.service.add(entity);
