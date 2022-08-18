@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,9 @@ public class SkillReferenceService {
 			return "Skill Name is already exist";
 		return this.repo.save(entity);
 		
+	}
+	public List<SkillReference> findall(){
+		return this.repo.findAll();
 	}
 	
 }
