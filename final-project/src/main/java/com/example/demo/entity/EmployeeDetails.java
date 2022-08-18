@@ -2,9 +2,12 @@ package com.example.demo.entity;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -34,9 +37,12 @@ public class EmployeeDetails {
 	@Column(name = "emp_des_id")
 	int designationId;
 	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "des_ref",referencedColumnName = "emp_desg_id")
+	EmployeeDesignation designationName;
+	
 	@DateTimeFormat(iso = ISO.DATE)
 	@Column(name = "date_of_joining")
 	LocalDate dateOfJoining;
-	
-	
+
 }
