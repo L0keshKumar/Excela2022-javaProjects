@@ -1,6 +1,9 @@
 package com.training;
 import java.util.*;
 
+import java.util.Map.*;
+import java.util.stream.Collectors;
+
 import com.training.model.Book;
 public class HashMapApplication {
 
@@ -22,7 +25,18 @@ public class HashMapApplication {
 		System.out.println("Hello:-"+map.get(700));
 		
 		
-		
+		TreeMap<Integer, Integer> one=new TreeMap<>();
+		one.put(101, 200);
+		one.put(102, 300);
+		one.put(103, 400);
+		TreeMap<Integer, Integer> two=new TreeMap<>();
+		two.put(201, 400);
+		two.put(202, 600);
+		int x=0;
+		for (Entry<Integer, Integer> inte : one.entrySet()) {
+			x=inte.getKey();
+		}
+		List<Integer> mapToList=two.values().stream().collect(Collectors.toList());
 
 	}
 

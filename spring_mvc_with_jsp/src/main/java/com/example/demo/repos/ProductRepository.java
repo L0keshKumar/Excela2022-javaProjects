@@ -21,6 +21,7 @@ public class ProductRepository implements CrudRepository<Product> {
 	public ProductRepository(JdbcTemplate template) {
 		super();
 		this.template = template;
+		
 	}
 
 	@Override

@@ -1,6 +1,7 @@
 package com.training;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.training.iface.CrudRepository;
 import com.training.model.Book;
@@ -51,6 +52,8 @@ public class Application {
 		print(service.findall());
 		System.out.println("-------------------------");
 		List<Book> bookList=((BookService)service).getBooksGrtThan(1000);
+		//Optional<List<Book>> optList=bookList;
+		//List<Optional<Book>>optList=bookList;
 		bookList.forEach(System.out::println);
 
 	}

@@ -15,7 +15,8 @@ public class SkillReferenceService {
 	private SkillReferenceRepo repo;
 	
 	public Object add(SkillReference entity) {
-		Optional<SkillReference> optiona=this.repo.findBySkillName(entity.getSkillName());
+		Optional<SkillReference> optiona=this.repo
+				.findBySkillName(entity.getSkillName());
 		if(optiona.isPresent())
 			return "Skill Name is already exist";
 		return this.repo.save(entity);

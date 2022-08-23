@@ -14,11 +14,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
+@Data
 @Entity
 @Table(name="loki_doc_otmbd2")
 
-@Data
+
 @NoArgsConstructor
 @AllArgsConstructor
 public class Doctor {
@@ -43,16 +43,11 @@ public class Doctor {
 	List<Patient> patientList;//One to Many : 
 	//One doctor have many Patients;
 
+	
 	@Override
 	public String toString() {
-		return "Doctor [doctorId=" + doctorId + ", doctorName=" + doctorName + ", department=" + department
+		return "Doctor [doctorId=" + doctorId 
+				+ ", doctorName=" + doctorName + ", department=" + department
 				+ ", phoneNumber=" + phoneNumber + "]";
 	}
-
-	
-	
-	
-	
-	
-	}
-
+}
